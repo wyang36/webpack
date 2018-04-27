@@ -5,7 +5,7 @@ import asynComponent from './hoc/asyncComponent';
 import Users from './containers/Users';
 
 const AsynPizza = asynComponent(() => {
-    return import('./containers/Pizza');
+    return import('./containers/Pizza.js');
 })
 
 class App extends Component {
@@ -13,8 +13,7 @@ class App extends Component {
         return (
             <div>
                 <div>
-                    <Link to="/">Users</Link>
-                    <Link to="/pizza">Pizza</Link>
+                    <Link to="/">Users</Link> | <Link to="/pizza">Pizza</Link>
                 </div>
                 <div>
                     <Route path="/" exact component={Users} />
@@ -24,3 +23,5 @@ class App extends Component {
         );
     }
 }
+
+export default App;

@@ -3,7 +3,7 @@
 const asyncComponent = (importComponent) => {
     return class extends Component {
         state = {
-            component:null
+            component: null
         }
 
         componentDidMount() {
